@@ -13,9 +13,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var flowersRegisterImage: UIImageView!
     @IBOutlet weak var backgroundRegisterImage: UIImageView!
     @IBOutlet weak var registerPasswordTextField: UITextField!
-    
     @IBOutlet weak var registerEmailTextField: UITextField!
     @IBOutlet weak var registerOutlet: PrettyButton!
+    
     @IBAction func pressedRegister(sender: AnyObject) {
         
         guard let password = registerPasswordTextField?.text else { return }
@@ -38,10 +38,15 @@ class RegisterViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBarHidden = true
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         // Do any additional setup after loading the view.
     }
 
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

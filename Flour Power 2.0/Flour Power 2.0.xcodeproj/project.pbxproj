@@ -68,7 +68,7 @@
 			children = (
 				3D8A631B1D53A94D002D2309 /* Flour Power 2.0 */,
 				3D8A631A1D53A94D002D2309 /* Products */,
-				3D8A63501D53C2D1002D2309 /* Control Flow */,
+				3D8A63501D53C2D1002D2309 /* System */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,7 +133,7 @@
 			name = CollectionView;
 			sourceTree = "<group>";
 		};
-		3D8A63501D53C2D1002D2309 /* Control Flow */ = {
+		3D8A63501D53C2D1002D2309 /* System */ = {
 			isa = PBXGroup;
 			children = (
 				3D8A63281D53A94D002D2309 /* Info.plist */,
@@ -141,7 +141,7 @@
 				3D8A63231D53A94D002D2309 /* Assets.xcassets */,
 				3D8A631C1D53A94D002D2309 /* AppDelegate.swift */,
 			);
-			name = "Control Flow";
+			name = System;
 			path = "Flour Power 2.0";
 			sourceTree = "<group>";
 		};
@@ -391,6 +391,7 @@
 				3D8A632D1D53A94D002D2309 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

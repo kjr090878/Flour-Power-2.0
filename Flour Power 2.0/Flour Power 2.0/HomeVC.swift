@@ -54,7 +54,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBarHidden = false
-        
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         
         var info = RequestInfo()
@@ -87,6 +87,9 @@ class HomeVC: UIViewController {
             
         }
         
+    }
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
 }

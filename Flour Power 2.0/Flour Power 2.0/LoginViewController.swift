@@ -31,8 +31,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
         
     }
     @IBAction func pressedLogin(sender: AnyObject) {
-        
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+      
         
         guard let password = passwordField?.text else { return }
         guard let email = emailField.text else { return }
@@ -57,12 +56,19 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
         
         emailField?.delegate = self
         passwordField?.delegate = self
-        
+        self.navigationController?.navigationBarHidden = true
+        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+       
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:
             UIKeyboardWillShowNotification, object: nil);
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     func keyboardWillShow(sender: NSNotification) {
