@@ -18,7 +18,6 @@
 		3D8A63351D53B557002D2309 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63341D53B557002D2309 /* RegisterViewController.swift */; };
 		3D8A63391D53B9EA002D2309 /* RecipesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63381D53B9EA002D2309 /* RecipesCollectionVC.swift */; };
 		3D8A633B1D53BA8D002D2309 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A633A1D53BA8D002D2309 /* RecipeDetailVC.swift */; };
-		3D8A633D1D53BB3F002D2309 /* RecipeIngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A633C1D53BB3F002D2309 /* RecipeIngredientsTableViewController.swift */; };
 		3D8A633F1D53BBE4002D2309 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A633E1D53BBE4002D2309 /* RecipeCell.swift */; };
 		3D8A63421D53BC3B002D2309 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63411D53BC3B002D2309 /* IngredientCell.swift */; };
 		3D8A63451D53BC91002D2309 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63441D53BC91002D2309 /* MyCell.swift */; };
@@ -42,7 +41,6 @@
 		3D8A63341D53B557002D2309 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3D8A63381D53B9EA002D2309 /* RecipesCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCollectionVC.swift; sourceTree = "<group>"; };
 		3D8A633A1D53BA8D002D2309 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
-		3D8A633C1D53BB3F002D2309 /* RecipeIngredientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeIngredientsTableViewController.swift; sourceTree = "<group>"; };
 		3D8A633E1D53BBE4002D2309 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		3D8A63411D53BC3B002D2309 /* IngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
 		3D8A63441D53BC91002D2309 /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 			children = (
 				3D8A634C1D53C20F002D2309 /* WebSearchTableViewController.swift */,
 				3D8A63461D53BCDD002D2309 /* SFPTableViewController.swift */,
-				3D8A633C1D53BB3F002D2309 /* RecipeIngredientsTableViewController.swift */,
 			);
 			name = TableViewControllers;
 			sourceTree = "<group>";
@@ -229,7 +226,6 @@
 				3D8A632F1D53AA9A002D2309 /* LoginViewController.swift in Sources */,
 				3D8A63311D53AC3B002D2309 /* PrettyButton.swift in Sources */,
 				3D8A631F1D53A94D002D2309 /* HomeVC.swift in Sources */,
-				3D8A633D1D53BB3F002D2309 /* RecipeIngredientsTableViewController.swift in Sources */,
 				3D8A633B1D53BA8D002D2309 /* RecipeDetailVC.swift in Sources */,
 				3D8A63491D53BD30002D2309 /* StepCell.swift in Sources */,
 				3D8A63471D53BCDD002D2309 /* SFPTableViewController.swift in Sources */,

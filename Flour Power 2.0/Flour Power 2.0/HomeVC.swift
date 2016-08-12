@@ -24,10 +24,8 @@ class HomeVC: UIViewController {
     
     @IBAction func searchMyRecipes(sender: AnyObject) {
         
-        
     }
     @IBAction func searchForRecipes(sender: AnyObject) {
-        
         
     }
     
@@ -46,9 +44,10 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var staticImageView: UIImageView!
     
-    @IBOutlet weak var slImage: UIImageView!
+    @IBOutlet weak var smallLogo: UIButton!
     
-    @IBOutlet weak var bgColorImage: UIImageView!
+    @IBAction func smallLogoButton(sender: AnyObject) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +55,7 @@ class HomeVC: UIViewController {
         navigationController?.navigationBarHidden = false
         navigationController!.navigationBar.tintColor = UIColor.whiteColor()
         UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         var info = RequestInfo()
         
         info.endpoint = "/categories"
@@ -76,20 +75,17 @@ class HomeVC: UIViewController {
                 self.category4.tag = categories[4]["id"] as? Int ?? 0
                 self.category5.tag = categories[5]["id"] as? Int ?? 0
                 
-                self.category0.setTitle(categories[0]["name"] as? String ?? "", forState: .Normal)
-                self.category1.setTitle(categories[1]["name"] as? String ?? "", forState: .Normal)
-                self.category2.setTitle(categories[2]["name"] as? String ?? "", forState: .Normal)
-                self.category3.setTitle(categories[3]["name"] as? String ?? "", forState: .Normal)
-                self.category4.setTitle(categories[4][""] as? String ?? "Soups/Salads", forState: .Normal)
-                self.category5.setTitle(categories[5][""] as? String ?? "Side Items", forState: .Normal)
+                self.category0.setTitle(categories[0]["name"] as? String ?? "Appetizers", forState: .Normal)
+                self.category1.setTitle(categories[1]["name"] as? String ?? "Drinks", forState: .Normal)
+                self.category2.setTitle(categories[2]["name"] as? String ?? "SideItems", forState: .Normal)
+                self.category3.setTitle(categories[3]["name"] as? String ?? "Soups/Salads", forState: .Normal)
+                self.category4.setTitle(categories[4][""] as? String ?? "Main Courses", forState: .Normal)
+                self.category5.setTitle(categories[5][""] as? String ?? "Desserts", forState: .Normal)
                 
             }
             
         }
         
-    }
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
     }
     
 }

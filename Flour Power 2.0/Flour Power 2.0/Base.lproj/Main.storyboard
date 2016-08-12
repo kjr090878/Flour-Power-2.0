@@ -15,14 +15,14 @@
                         <viewControllerLayoutGuide type="bottom" id="QlA-Xq-V6p"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RyW-An-Mj5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ZX4-NZ-MaT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ZX4-NZ-MaT">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RYH-NI-gxv">
-                                <rect key="frame" x="30" y="567" width="315" height="60"/>
+                                <rect key="frame" x="30" y="503" width="315" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fU-vk-r5e" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="148" height="60"/>
@@ -67,25 +67,25 @@
                                     <constraint firstAttribute="height" constant="60" id="1rq-Mi-C2i"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wre-te-Xkx">
-                                <rect key="frame" x="30" y="467" width="315" height="60"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wre-te-Xkx">
+                                <rect key="frame" x="30" y="403" width="315" height="60"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="l5d-go-j5V"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zml-iW-jjb">
-                                <rect key="frame" x="30" y="367" width="315" height="60"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="demo@demo.net" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zml-iW-jjb">
+                                <rect key="frame" x="30" y="303" width="315" height="60"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="pYA-pt-qJk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="juI-6W-4ii">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="juI-6W-4ii">
                                 <rect key="frame" x="40" y="129" width="295" height="172"/>
                             </imageView>
                         </subviews>
@@ -112,7 +112,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vyQ-it-Lm1"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="bgImage" destination="ZX4-NZ-MaT" id="HPQ-gB-qgZ"/>
                         <outlet property="emailField" destination="zml-iW-jjb" id="C8E-aO-YZM"/>
@@ -135,14 +135,14 @@
                         <viewControllerLayoutGuide type="bottom" id="eIR-64-7xE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZKB-Ag-33X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="djh-LU-Sg3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="djh-LU-Sg3">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsu-FA-JRR">
-                                <rect key="frame" x="20" y="427" width="335" height="60"/>
+                                <rect key="frame" x="20" y="363" width="335" height="60"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="jaZ-qZ-1Jd"/>
@@ -151,7 +151,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wnY-Ua-d3t">
-                                <rect key="frame" x="20" y="507" width="335" height="60"/>
+                                <rect key="frame" x="20" y="443" width="335" height="60"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="P2g-bu-2Dx"/>
@@ -160,7 +160,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqt-Oq-WzL" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                <rect key="frame" x="20" y="587" width="335" height="60"/>
+                                <rect key="frame" x="20" y="523" width="335" height="60"/>
                                 <color key="backgroundColor" red="0.82352941180000006" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="RWY-cs-iaS"/>
@@ -181,7 +181,7 @@
                                     <action selector="pressedRegister:" destination="SmV-sV-ceN" eventType="touchUpInside" id="J9a-in-DUI"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flowers" translatesAutoresizingMaskIntoConstraints="NO" id="Rcz-pH-5F9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="flowers" translatesAutoresizingMaskIntoConstraints="NO" id="Rcz-pH-5F9">
                                 <rect key="frame" x="30" y="94" width="315" height="275"/>
                             </imageView>
                         </subviews>
@@ -207,7 +207,7 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="backgroundRegisterImage" destination="djh-LU-Sg3" id="CnC-nq-UF9"/>
@@ -240,7 +240,7 @@
                                 <rect key="frame" x="20" y="427" width="335" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXr-vn-8Lv" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Appetizers">
@@ -259,7 +259,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tp-hc-cgI" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="172" y="0.0" width="162.5" height="60"/>
+                                        <rect key="frame" x="173" y="0.0" width="163" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Drinks">
@@ -302,6 +302,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="searchForRecipes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K00-0q-xH3"/>
+                                            <segue destination="CBK-vI-i7m" kind="show" id="BwJ-ui-Sqj"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hT-6N-wcK" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
@@ -321,6 +322,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="searchMyRecipes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qs5-Id-nyH"/>
+                                            <segue destination="u3O-vu-Fe4" kind="show" id="16R-48-myz"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -332,7 +334,7 @@
                                 <rect key="frame" x="20" y="507" width="335" height="60"/>
                                 <subviews>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRJ-w0-fwb" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Side Dishes">
@@ -351,7 +353,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpg-jH-3zC" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="172" y="0.0" width="162.5" height="60"/>
+                                        <rect key="frame" x="173" y="0.0" width="163" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Soups/Salads">
@@ -378,7 +380,7 @@
                                 <rect key="frame" x="20" y="587" width="335" height="60"/>
                                 <subviews>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWF-tn-Qkc" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Main Courses">
@@ -397,7 +399,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-Ft-oij" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                        <rect key="frame" x="172" y="0.0" width="162.5" height="60"/>
+                                        <rect key="frame" x="173" y="0.0" width="163" height="60"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Desserts">
@@ -441,7 +443,17 @@
                             <constraint firstAttribute="trailing" secondItem="mEG-ZJ-2AQ" secondAttribute="trailing" constant="20" id="tI0-Ip-AVc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="scl-gO-GbV"/>
+                    <navigationItem key="navigationItem" id="scl-gO-GbV">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="con-Sq-P5f">
+                            <rect key="frame" x="160.5" y="6" width="54" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="logosmall"/>
+                            <connections>
+                                <action selector="smallLogoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ecm-hs-Fd5"/>
+                            </connections>
+                        </button>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -453,6 +465,7 @@
                         <outlet property="category5" destination="KcN-Ft-oij" id="N24-ka-5lq"/>
                         <outlet property="sFR" destination="JHm-dn-IbN" id="N2j-kn-NNa"/>
                         <outlet property="sMR" destination="3hT-6N-wcK" id="KJf-oj-emU"/>
+                        <outlet property="smallLogo" destination="con-Sq-P5f" id="KSn-L9-oF5"/>
                         <outlet property="staticImageView" destination="ca0-kw-zko" id="z4L-uf-xyP"/>
                     </connections>
                 </viewController>
@@ -460,17 +473,46 @@
             </objects>
             <point key="canvasLocation" x="1234.5" y="-346.5"/>
         </scene>
-        <!--Recipe Ingredients Table View Controller-->
+        <!--Web Search Table View Controller-->
+        <scene sceneID="iXr-6H-ZXK">
+            <objects>
+                <tableViewController id="CBK-vI-i7m" customClass="WebSearchTableViewController" customModule="Flour_Power_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="daR-TP-8Kz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Pat-y4-SNK">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pat-y4-SNK" id="YWS-EA-oqE">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CBK-vI-i7m" id="906-EJ-iDE"/>
+                            <outlet property="delegate" destination="CBK-vI-i7m" id="Gaj-vJ-RRD"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zlz-pa-ywg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="392"/>
+        </scene>
+        <!--Table View Controller-->
         <scene sceneID="uGn-Gy-b1h">
             <objects>
-                <tableViewController id="u3O-vu-Fe4" customClass="RecipeIngredientsTableViewController" customModule="Flour_Power_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="u3O-vu-Fe4" customClass="SFPTableViewController" customModule="Flour_Power_2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wBg-qZ-ZnX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hQh-06-Fz4">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="hQh-06-Fz4">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hQh-06-Fz4" id="5hL-C2-4Cv">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -492,11 +534,12 @@
         <!--Recipes CollectionVC-->
         <scene sceneID="Otn-Yn-B2b">
             <objects>
-                <collectionViewController id="2K7-lM-l9E" customClass="RecipesCollectionVC" customModule="Flour_Power_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="yHm-0i-Atc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController storyboardIdentifier="RecipesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2K7-lM-l9E" customClass="RecipesCollectionVC" customModule="Flour_Power_2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" id="yHm-0i-Atc">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="me4-wf-Aa0">
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5cd-VK-THH">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -518,6 +561,8 @@
                             <outlet property="delegate" destination="2K7-lM-l9E" id="MjT-Gn-2PA"/>
                         </connections>
                     </collectionView>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="recipeCollectionView" destination="yHm-0i-Atc" id="Qt6-zt-FXP"/>
@@ -538,9 +583,150 @@
                     <view key="view" contentMode="scaleToFill" id="zjm-Vm-xDW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ycA-CO-7vk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5c-qm-4yQ">
+                                <rect key="frame" x="0.0" y="9" width="375" height="20.5"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.4549019608" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EdU-vw-1NW">
+                                <rect key="frame" x="0.0" y="270" width="375" height="397"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="397" id="GAF-5o-BKM"/>
+                                </constraints>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="CET-4S-VTN">
+                                <rect key="frame" x="80" y="213" width="215" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYR-UV-eoN" userLabel="pauseButton" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="48.5" height="47"/>
+                                        <state key="normal" title="Button" image="pausebutton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pauseButton:" destination="Cep-km-ojv" eventType="touchUpInside" id="Qn1-ji-tII"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uuv-fX-9M0" userLabel="replayButton" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="83.5" y="0.0" width="48" height="47"/>
+                                        <state key="normal" title="Button" image="replaybutton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="lastButton:" destination="Cep-km-ojv" eventType="touchUpInside" id="Vng-pD-4An"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCr-0t-aBX" userLabel="stopButton" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="166.5" y="0.0" width="48.5" height="47"/>
+                                        <state key="normal" title="Button" image="stopbutton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="24"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="stopButton:" destination="Cep-km-ojv" eventType="touchUpInside" id="mri-Yt-fmc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="Z8D-tj-AhC"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="57" translatesAutoresizingMaskIntoConstraints="NO" id="SgQ-wL-oMx">
+                                <rect key="frame" x="45" y="213" width="285" height="47"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTt-Rh-vpZ" userLabel="ingredientButton" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="47"/>
+                                        <state key="normal" image="ingredientbutton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="21"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextIngredientButton:" destination="Cep-km-ojv" eventType="touchUpInside" id="GE9-gZ-kYy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV8-je-KgD" userLabel="directionButton" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="171" y="0.0" width="114" height="47"/>
+                                        <state key="normal" image="directionbutton"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="21"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextStepButton:" destination="Cep-km-ojv" eventType="touchUpInside" id="PKG-a7-KNw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="x1h-oZ-sp8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ycA-CO-7vk" firstAttribute="top" secondItem="u5c-qm-4yQ" secondAttribute="bottom" constant="-30" id="6Bk-0W-32M"/>
+                            <constraint firstAttribute="trailing" secondItem="CET-4S-VTN" secondAttribute="trailing" constant="80" id="9Mf-KW-fJE"/>
+                            <constraint firstItem="Q6T-vN-jY3" firstAttribute="top" secondItem="EdU-vw-1NW" secondAttribute="bottom" id="DqR-cX-PI0"/>
+                            <constraint firstItem="EdU-vw-1NW" firstAttribute="leading" secondItem="zjm-Vm-xDW" secondAttribute="leading" id="HB4-oo-f3g"/>
+                            <constraint firstItem="SgQ-wL-oMx" firstAttribute="leading" secondItem="zjm-Vm-xDW" secondAttribute="leading" constant="45" id="Lun-05-nkW"/>
+                            <constraint firstItem="EdU-vw-1NW" firstAttribute="top" secondItem="CET-4S-VTN" secondAttribute="bottom" constant="10" id="M5R-CE-1uN"/>
+                            <constraint firstItem="ycA-CO-7vk" firstAttribute="leading" secondItem="zjm-Vm-xDW" secondAttribute="leading" id="RQR-9N-pQF"/>
+                            <constraint firstItem="CET-4S-VTN" firstAttribute="top" secondItem="ycA-CO-7vk" secondAttribute="bottom" constant="10" id="XFo-4p-OTb"/>
+                            <constraint firstItem="CET-4S-VTN" firstAttribute="leading" secondItem="zjm-Vm-xDW" secondAttribute="leading" constant="80" id="aCw-FH-SJm"/>
+                            <constraint firstItem="u5c-qm-4yQ" firstAttribute="trailing" secondItem="ycA-CO-7vk" secondAttribute="trailing" id="aEM-Og-d2U"/>
+                            <constraint firstItem="u5c-qm-4yQ" firstAttribute="leading" secondItem="ycA-CO-7vk" secondAttribute="leading" id="eF5-Yq-SAj"/>
+                            <constraint firstAttribute="trailing" secondItem="ycA-CO-7vk" secondAttribute="trailing" id="egR-Kq-vSe"/>
+                            <constraint firstItem="ycA-CO-7vk" firstAttribute="top" secondItem="zjm-Vm-xDW" secondAttribute="top" id="ewG-jP-3EC"/>
+                            <constraint firstAttribute="trailing" secondItem="SgQ-wL-oMx" secondAttribute="trailing" constant="45" id="nDc-V3-G7c"/>
+                            <constraint firstItem="EdU-vw-1NW" firstAttribute="top" secondItem="SgQ-wL-oMx" secondAttribute="bottom" constant="10" id="o56-yE-Yb4"/>
+                            <constraint firstAttribute="trailing" secondItem="EdU-vw-1NW" secondAttribute="trailing" id="zdd-Cb-QdU"/>
+                        </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="btnLast" destination="Uuv-fX-9M0" id="Nnb-n2-PB9"/>
+                        <outlet property="btnNextIngredient" destination="bTt-Rh-vpZ" id="LU6-kf-oPa"/>
+                        <outlet property="btnNextStep" destination="tV8-je-KgD" id="emI-iB-Yvt"/>
+                        <outlet property="btnPause" destination="kYR-UV-eoN" id="qn2-wx-Kzw"/>
+                        <outlet property="btnStop" destination="xCr-0t-aBX" id="lpX-qF-t42"/>
+                        <outlet property="buttonStack" destination="SgQ-wL-oMx" id="Gyo-2x-eAX"/>
+                        <outlet property="nextStack" destination="CET-4S-VTN" id="34L-hz-DpE"/>
+                        <outlet property="recipeImageView" destination="ycA-CO-7vk" id="Nyg-DS-gPu"/>
+                        <outlet property="recipeTableView" destination="EdU-vw-1NW" id="Zws-ij-cSc"/>
+                        <outlet property="titleLabel" destination="u5c-qm-4yQ" id="W1t-PB-cc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d0W-Gd-knL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -603,7 +789,14 @@
     <resources>
         <image name="Food-Photo-1" width="900" height="600"/>
         <image name="bg" width="320" height="568"/>
+        <image name="directionbutton" width="76" height="28"/>
         <image name="flowers" width="233" height="180"/>
+        <image name="ingredientbutton" width="86" height="28"/>
         <image name="logo" width="150" height="89"/>
+        <image name="logosmall" width="28" height="32"/>
+        <image name="pausebutton" width="50" height="50"/>
+        <image name="replaybutton" width="50" height="50"/>
+        <image name="stopbutton" width="50" height="50"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
