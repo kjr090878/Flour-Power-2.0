@@ -15,6 +15,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
     
     @IBOutlet weak var bgImage: UIImageView!
     
+    @IBOutlet weak var segueToHomeVCActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var loginOutlet: PrettyButton!
@@ -24,10 +25,6 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
     @IBOutlet weak var loginRegisterOutlet: PrettyButton!
     
     @IBAction func loginRegisterAction(sender: AnyObject) {
-        
-   
-        
-        
         
     }
     @IBAction func pressedLogin(sender: AnyObject) {
@@ -43,6 +40,11 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
             
             let homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("HomeVC")
             self.navigationController?.pushViewController(homeVC!, animated: true)
+            
+            self.segueToHomeVCActivityIndicator.startAnimating()
+            self.segueToHomeVCActivityIndicator.hidden = true
+            self.segueToHomeVCActivityIndicator.stopAnimating()
+           
             
         })
         
@@ -65,6 +67,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
             UIKeyboardWillShowNotification, object: nil);
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
+   
         
     }
   
