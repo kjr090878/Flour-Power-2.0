@@ -14,8 +14,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     var recipe: Recipe!
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var FImageView: UIImageView!
-    @IBOutlet weak var bgImageView: UIImageView!
+
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var btnLast: UIButton!
     @IBOutlet weak var btnPause: UIButton!
@@ -42,7 +41,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var spokenTextLengths: Int = 0
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         
         if !loadSettings() {
             registerDefaultSettings()
@@ -56,7 +55,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         recipeImageView.image = recipe.recipeSourceImage ?? recipe.getImage()
         
-        recipeImageView.contentMode = .ScaleAspectFill
+        recipeImageView.contentMode = .scaleAspectFill
         
         
         recipeTableView.dataSource = self
@@ -75,9 +74,9 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         
-        speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+        speechSynthesizer.stopSpeaking(at: AVSpeechBoundary.word)
         
     }
     
@@ -87,18 +86,18 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         pitch = 1.0
         volume = 1.0
         
-        let defaultSpeechSettings: [String:AnyObject] = ["rate": rate, "pitch": pitch, "volume": volume]
+        let defaultSpeechSettings: [String:AnyObject] = ["rate": rate as AnyObject, "pitch": pitch as AnyObject, "volume": volume as AnyObject]
         
-        NSUserDefaults.standardUserDefaults().registerDefaults(defaultSpeechSettings)
+        UserDefaults.standard.register(defaults: defaultSpeechSettings)
     }
     
     func loadSettings() -> Bool {
-        let userDefaults = NSUserDefaults.standardUserDefaults() as NSUserDefaults
+        let userDefaults = UserDefaults.standard as UserDefaults
         
-        if let theRate: Float = userDefaults.valueForKey("rate") as? Float {
+        if let theRate: Float = userDefaults.value(forKey: "rate") as? Float {
             rate = theRate
-            pitch = userDefaults.valueForKey("pitch") as! Float
-            volume = userDefaults.valueForKey("volume") as! Float
+            pitch = userDefaults.value(forKey: "pitch") as! Float
+            volume = userDefaults.value(forKey: "volume") as! Float
             
             return true
         }
@@ -108,9 +107,9 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var currentIngredient = 0
     
-    @IBAction func nextIngredientButton(sender: AnyObject) {
+    @IBAction func nextIngredientButton(_ sender: AnyObject) {
         
-        if !speechSynthesizer.speaking {
+        if !speechSynthesizer.isSpeaking {
             
             
             let ingredient = recipe.ingredients[currentIngredient]
@@ -128,7 +127,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             speechUtterance.pitchMultiplier = pitch
             speechUtterance.volume = volume
             
-            speechSynthesizer.speakUtterance(speechUtterance)
+            speechSynthesizer.speak(speechUtterance)
             
             currentIngredient += 1
             
@@ -145,10 +144,10 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var currentStep = 0
     
-    @IBAction func nextStepButton(sender: AnyObject) {
+    @IBAction func nextStepButton(_ sender: AnyObject) {
         
         
-        if !speechSynthesizer.speaking {
+        if !speechSynthesizer.isSpeaking {
             
             
             let step = recipe.directions[currentStep]
@@ -159,7 +158,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             speechUtterance.pitchMultiplier = pitch
             speechUtterance.volume = volume
             
-            speechSynthesizer.speakUtterance(speechUtterance)
+            speechSynthesizer.speak(speechUtterance)
             
             currentStep += 1
             
@@ -170,15 +169,15 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         animateActionButtonAppearance(true)
-        if !speechSynthesizer.speaking {
+        if !speechSynthesizer.isSpeaking {
             animateActionButtonAppearance(false)
         }
         
     }
     
-    @IBAction func pauseButton(sender: AnyObject) {
+    @IBAction func pauseButton(_ sender: AnyObject) {
         
-        speechSynthesizer.pauseSpeakingAtBoundary(AVSpeechBoundary.Word)
+        speechSynthesizer.pauseSpeaking(at: AVSpeechBoundary.word)
         
         animateActionButtonAppearance(false)
         
@@ -186,13 +185,13 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var speechUtterance: AVSpeechUtterance!
     
-    @IBAction func lastButton(sender: AnyObject) {
+    @IBAction func lastButton(_ sender: AnyObject) {
         
-        guard !speechSynthesizer.speaking else { return }
+        guard !speechSynthesizer.isSpeaking else { return }
         
         if let utterance = speechUtterance {
             
-            speechSynthesizer.speakUtterance(utterance)
+            speechSynthesizer.speak(utterance)
             
         }
         
@@ -201,15 +200,15 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-    @IBAction func stopButton(sender: AnyObject) {
+    @IBAction func stopButton(_ sender: AnyObject) {
         
-        speechSynthesizer.stopSpeakingAtBoundary(AVSpeechBoundary.Word)
+        speechSynthesizer.stopSpeaking(at: AVSpeechBoundary.word)
         
         animateActionButtonAppearance(false)
         
     }
     
-    func animateActionButtonAppearance(shouldHideSpeakButton: Bool) {
+    func animateActionButtonAppearance(_ shouldHideSpeakButton: Bool) {
         
         var nextIngredientStepButtonsAlphaValue: CGFloat = 1.0
         var pauseLastStopButtonsAlphaValue: CGFloat = 0.0
@@ -221,7 +220,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         
-        UIView.animateWithDuration(0.25, animations: { () -> Void in
+        UIView.animate(withDuration: 0.25, animations: { () -> Void in
             
             self.nextStack.alpha = nextIngredientStepButtonsAlphaValue
             
@@ -232,27 +231,27 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didFinishSpeechUtterance utterance: AVSpeechUtterance) {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         
     }
     
     
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, didStartSpeechUtterance utterance: AVSpeechUtterance) {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
         
     }
     
     
-    func speechSynthesizer(synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
         
     }
     // MARK: - Table view data source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // sections : 0 - Ingredients, 1 - Steps
         return 2
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
         if section == 0 {
@@ -269,13 +268,13 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
         var reuseID = ""
         
         
-        if indexPath.section == 0 {
+        if (indexPath as NSIndexPath).section == 0 {
             
             reuseID = "IngredientCell"
             
@@ -286,11 +285,11 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(reuseID, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
         
-        if indexPath.section == 0 {
+        if (indexPath as NSIndexPath).section == 0 {
             
-            let ingredient = recipe.ingredients[indexPath.row]
+            let ingredient = recipe.ingredients[(indexPath as NSIndexPath).row]
             
             
             
@@ -305,9 +304,9 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         } else {
             
-            print(recipe.directions[indexPath.row])
+            print(recipe.directions[(indexPath as NSIndexPath).row])
             
-            cell.textLabel?.text = recipe.directions[indexPath.row]
+            cell.textLabel?.text = recipe.directions[(indexPath as NSIndexPath).row]
             
             cell.backgroundColor = UIColor(red:0.82, green:0.99, blue:1, alpha:1)
             
@@ -318,7 +317,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         
         let view = UIView(frame: CGRect(x: 20, y: 0, width: 200, height: 40))
@@ -329,7 +328,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let label = UILabel(frame: view.frame)
         
-        label.textColor = UIColor.whiteColor()
+        label.textColor = UIColor.white
         
         if section == 0 {
             
@@ -343,7 +342,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         return view
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         
         return 40

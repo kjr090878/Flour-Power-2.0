@@ -28,9 +28,9 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
     
     @IBOutlet weak var itemBackButton: UIBarButtonItem!
     
-    @IBAction func bButton(sender: UIBarButtonItem) {
+    @IBAction func bButton(_ sender: UIBarButtonItem) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
         
     }
     
@@ -60,12 +60,12 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
         appSearchBar.resignFirstResponder()
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         
         return recipes.count
@@ -74,11 +74,11 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
     
     
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! MyCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCell
         
-        let recipe = recipes[indexPath.row]
+        let recipe = recipes[(indexPath as NSIndexPath).row]
         
         print(recipe.recipeTitle)
         
@@ -88,9 +88,9 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
         
         cell.MyImage?.image = recipe.recipeSourceImage ?? recipe.getImage()
         
-        cell.MyImage?.contentMode = .ScaleAspectFill
+        cell.MyImage?.contentMode = .scaleAspectFill
         
-        func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             
             
             self.tableView.reloadData()
@@ -105,7 +105,7 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
     
     
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         searchActive = true
         
         
@@ -114,7 +114,7 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
     
     
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
         dismissKeyboard()
         appSearchBar.text = ""
@@ -129,7 +129,7 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
         //    }
         
         
-        func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
             
             recipes = []
             
@@ -159,7 +159,7 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
                 self.tableView.reloadData()
             }
             
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 
                 self.dismissKeyboard()
                 
@@ -167,11 +167,11 @@ class SFPTableViewController: UITableViewController, UISearchBarDelegate, UISear
             
         }
         
-        func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
             
-            let recipe = recipes[indexPath.row]
+            let recipe = recipes[(indexPath as NSIndexPath).row]
             
-            let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as? RecipeDetailVC
+            let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? RecipeDetailVC
             
             
             detailVC?.recipe = recipe

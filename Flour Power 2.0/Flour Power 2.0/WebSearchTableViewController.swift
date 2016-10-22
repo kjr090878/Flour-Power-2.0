@@ -22,9 +22,9 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
     
     
     
-    @IBAction func backButtonItem(sender: UIBarButtonItem) {
+    @IBAction func backButtonItem(_ sender: UIBarButtonItem) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
         
     }
     @IBOutlet weak var webSearchBar: UISearchBar!
@@ -60,21 +60,21 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
         webSearchBar.resignFirstResponder()
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return recipes.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! WebCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! WebCell
         
-        let recipe = recipes[indexPath.row]
+        let recipe = recipes[(indexPath as NSIndexPath).row]
         
         print(recipe.recipeTitle)
         
@@ -84,7 +84,7 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
         
         cell.webView?.image = recipe.recipeSourceImage ?? recipe.getImage()
         
-        cell.webView?.contentMode = .ScaleAspectFill
+        cell.webView?.contentMode = .scaleAspectFill
         
         
         return cell
@@ -94,7 +94,7 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
     
     
     
-    func updateSearchResultsForSearchController(searchController: UISearchController)
+    func updateSearchResults(for searchController: UISearchController)
     {
         searchActive = true
         webSearchBar.text = ""
@@ -105,7 +105,7 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
     }
     
     
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchActive = false
         dismissKeyboard()
         webSearchBar.text = ""
@@ -113,7 +113,7 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
     }
     
     
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         recipes = []
         
@@ -140,7 +140,7 @@ class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, 
             
         }
         
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.dismissKeyboard()
             
         }

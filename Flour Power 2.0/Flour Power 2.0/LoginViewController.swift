@@ -24,10 +24,10 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
     
     @IBOutlet weak var loginRegisterOutlet: PrettyButton!
     
-    @IBAction func loginRegisterAction(sender: AnyObject) {
+    @IBAction func loginRegisterAction(_ sender: AnyObject) {
         
     }
-    @IBAction func pressedLogin(sender: AnyObject) {
+    @IBAction func pressedLogin(_ sender: AnyObject) {
       
         
         guard let password = passwordField?.text else { return }
@@ -38,11 +38,9 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
         
         RailsRequest.session().loginWithEmail(email, andPassword: password, completion: {
             
-            let homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("HomeVC")
+            let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")
             self.navigationController?.pushViewController(homeVC!, animated: true)
-            
             self.segueToHomeVCActivityIndicator.startAnimating()
-            self.segueToHomeVCActivityIndicator.hidden = true
             self.segueToHomeVCActivityIndicator.stopAnimating()
            
             
@@ -58,44 +56,46 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
         
         emailField?.delegate = self
         passwordField?.delegate = self
-        self.navigationController?.navigationBarHidden = true
-        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        self.navigationController?.isNavigationBarHidden = true
+        navigationController!.navigationBar.tintColor = UIColor.white
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name:
-            UIKeyboardWillShowNotification, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow(_:)), name:
+            NSNotification.Name.UIKeyboardWillShow, object: nil);
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil);
-   
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+        view.addSubview(segueToHomeVCActivityIndicator)
+        
+       
         
     }
   
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    func keyboardWillShow(sender: NSNotification) {
+    func keyboardWillShow(_ sender: Notification) {
         
         self.view.frame.origin.y = -210
         
     }
     
-    func keyboardWillHide(sender: NSNotification) {
+    func keyboardWillHide(_ sender: Notification) {
         
         self.view.frame.origin.y = 0
         
     }
     
-    func textFieldShouldReturn(userText: UITextField) -> Bool {
+    func textFieldShouldReturn(_ userText: UITextField) -> Bool {
         userText.resignFirstResponder()
         return true
     }

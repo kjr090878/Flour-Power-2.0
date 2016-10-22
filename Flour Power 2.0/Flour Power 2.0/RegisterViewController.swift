@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var flowersRegisterImage: UIImageView!
     @IBOutlet weak var backgroundRegisterImage: UIImageView!
@@ -16,7 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var registerEmailTextField: UITextField!
     @IBOutlet weak var registerOutlet: PrettyButton!
     
-    @IBAction func pressedRegister(sender: AnyObject) {
+    @IBAction func pressedRegister(_ sender: AnyObject) {
         
         guard let password = registerPasswordTextField?.text else { return }
         guard let email = registerEmailTextField.text else { return }
@@ -28,7 +28,7 @@ class RegisterViewController: UIViewController {
         
         RailsRequest.session().registerWithEmail(email, andPassword: password, completion: {
             
-            let homeVC = self.storyboard?.instantiateViewControllerWithIdentifier("HomeVC")
+            let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")
             self.navigationController?.pushViewController(homeVC!, animated: true)
             
             
@@ -38,25 +38,31 @@ class RegisterViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = true
-        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        registerEmailTextField?.delegate = self
+        registerPasswordTextField?.delegate = self
+        self.navigationController?.isNavigationBarHidden = true
+        navigationController!.navigationBar.tintColor = UIColor.white
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         
         // Do any additional setup after loading the view.
     }
 
   
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        NotificationCenter.default.addObserver(self, selector: #selector(RegisterViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(RegisterViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,14 +70,34 @@ class RegisterViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    
+    var keyboardAdjusted = false
+    var lastKeyboardOffset: CGFloat = 0.0
+    
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func keyboardWillShow(_ notification: Notification) {
+        if keyboardAdjusted == false {
+            lastKeyboardOffset = getKeyboardHeight(notification)
+            view.frame.origin.y -= lastKeyboardOffset
+            keyboardAdjusted = true
+        }
     }
-    */
-
+    
+    func keyboardWillHide(_ notification: Notification) {
+        if keyboardAdjusted == true {
+            view.frame.origin.y += lastKeyboardOffset
+            keyboardAdjusted = false
+        }
+    }
+    
+    func getKeyboardHeight(_ notification: Notification) -> CGFloat {
+        let userInfo = (notification as NSNotification).userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue
+        return keyboardSize.cgRectValue.height
+    }
+    
+    
 }
+
+

@@ -10,7 +10,7 @@ import UIKit
 
 private let _rr = RailsRequest()
 
-private let _d = NSUserDefaults.standardUserDefaults()
+private let _d = UserDefaults.standard
 
 private let APIbaseURL = "https://flour-power.herokuapp.com"
 
@@ -24,12 +24,12 @@ class RailsRequest: NSObject {
     
     var token: String? {
         
-        get { return _d.objectForKey("token") as? String }
-        set { _d.setObject(newValue, forKey: "token") }
+        get { return _d.object(forKey: "token") as? String }
+        set { _d.set(newValue, forKey: "token") }
         
     }
     
-    func loginWithEmail(email: String, andPassword password: String, completion: () -> ()) {
+    func loginWithEmail(_ email: String, andPassword password: String, completion: @escaping () -> ()) {
         
         var info = RequestInfo()
         
@@ -39,8 +39,8 @@ class RailsRequest: NSObject {
         
         info.parameters = [
             
-            "email" : email,
-            "password" : password
+            "email" : email as AnyObject,
+            "password" : password as AnyObject
             
         ]
         
@@ -64,7 +64,7 @@ class RailsRequest: NSObject {
         
     }
     
-    func registerWithEmail(email: String, andPassword password: String, completion: () -> ()) {
+    func registerWithEmail(_ email: String, andPassword password: String, completion: @escaping () -> ()) {
         
         var info = RequestInfo()
         
@@ -75,8 +75,8 @@ class RailsRequest: NSObject {
         info.parameters = [
             
             
-            "password" : password,
-            "email" : email
+            "password" : password as AnyObject,
+            "email" : email as AnyObject
             
         ]
         
@@ -101,37 +101,37 @@ class RailsRequest: NSObject {
     }
     
     
-    func requiredWithInfo(info: RequestInfo, completion: (returnedInfo: AnyObject?) -> ()) {
+    func requiredWithInfo(_ info: RequestInfo, completion: @escaping (_ returnedInfo: AnyObject?) -> ()) {
         
         let fullURLString = APIbaseURL + info.endpoint
         
-        guard let url = NSURL(string: fullURLString) else { return } //add run completion with fail
+        guard let url = URL(string: fullURLString) else { return } //add run completion with fail
         
-        let request = NSMutableURLRequest(URL: url)
+        let request = NSMutableURLRequest(url: url)
         
-        request.HTTPMethod = info.method.rawValue
+        request.httpMethod = info.method.rawValue
         
         
         if let token = token {
             
             request.setValue(token, forHTTPHeaderField: "auth-token")
             
-            //                print(token)
+                            print(token)
             
         }
         
         if info.parameters.count > 0 {
             
-            if let requestData = try? NSJSONSerialization.dataWithJSONObject(info.parameters, options: .PrettyPrinted) {
+            if let requestData = try? JSONSerialization.data(withJSONObject: info.parameters, options: .prettyPrinted) {
                 
-                if let jsonString = NSString(data: requestData, encoding: NSUTF8StringEncoding) {
+                if let jsonString = NSString(data: requestData, encoding: String.Encoding.utf8.rawValue) {
                     
                     request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
                     
                     //possibly remove this line
-                    let postData = jsonString.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)
+                    let postData = jsonString.data(using: String.Encoding.ascii.rawValue, allowLossyConversion: true)
                     
-                    request.HTTPBody = postData
+                    request.httpBody = postData
                     
                 }
                 
@@ -148,15 +148,15 @@ class RailsRequest: NSObject {
         // add parameters to body
         
         //creates a task from request
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async(execute: { () -> Void in
                 
                 
                 if let data = data {
                     
                     
-                    if let returnedInfo = try? NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) {
+                    if let returnedInfo = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
                         
                         completion(returnedInfo: returnedInfo)
                         
@@ -171,7 +171,7 @@ class RailsRequest: NSObject {
                 
             })
             
-        }
+        }) 
         
         //runs the task (aka: makes the request call)
         task.resume()

@@ -21,16 +21,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var category4: PrettyButton!
     @IBOutlet weak var category5: PrettyButton!
     
-    @IBAction func searchMyRecipes(sender: AnyObject) {
+    @IBAction func searchMyRecipes(_ sender: AnyObject) {
         
     }
-    @IBAction func searchForRecipes(sender: AnyObject) {
+    @IBAction func searchForRecipes(_ sender: AnyObject) {
         
     }
     
-    @IBAction func categoryButton(sender: UIButton) {
+    @IBAction func categoryButton(_ sender: UIButton) {
         
-        let recipesVC = storyboard?.instantiateViewControllerWithIdentifier("RecipesVC") as? RecipesCollectionVC
+        let recipesVC = storyboard?.instantiateViewController(withIdentifier: "RecipesVC") as? RecipesCollectionVC
         
         
         recipesVC?.category = sender.titleLabel?.text
@@ -45,16 +45,16 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var smallLogo: UIButton!
     
-    @IBAction func smallLogoButton(sender: AnyObject) {
+    @IBAction func smallLogoButton(_ sender: AnyObject) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBarHidden = false
-        navigationController!.navigationBar.tintColor = UIColor.whiteColor()
-        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        navigationController?.isNavigationBarHidden = false
+        navigationController!.navigationBar.tintColor = UIColor.white
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         var info = RequestInfo()
         
         info.endpoint = "/categories"
@@ -73,12 +73,12 @@ class HomeVC: UIViewController {
                 self.category4.tag = categories[4]["id"] as? Int ?? 0
                 self.category5.tag = categories[5]["id"] as? Int ?? 0
                 
-                self.category0.setTitle(categories[0]["name"] as? String ?? "", forState: .Normal)
-                self.category1.setTitle(categories[1]["name"] as? String ?? "", forState: .Normal)
-                self.category2.setTitle(categories[2]["name"] as? String ?? "", forState: .Normal)
-                self.category3.setTitle(categories[3]["name"] as? String ?? "", forState: .Normal)
-                self.category4.setTitle(categories[4]["name"] as? String ?? "", forState: .Normal)
-                self.category5.setTitle(categories[5]["name"] as? String ?? "", forState: .Normal)
+                self.category0.setTitle(categories[0]["name"] as? String ?? "", for: UIControlState())
+                self.category1.setTitle(categories[1]["name"] as? String ?? "", for: UIControlState())
+                self.category2.setTitle(categories[2]["name"] as? String ?? "", for: UIControlState())
+                self.category3.setTitle(categories[3]["name"] as? String ?? "", for: UIControlState())
+                self.category4.setTitle(categories[4]["name"] as? String ?? "", for: UIControlState())
+                self.category5.setTitle(categories[5]["name"] as? String ?? "", for: UIControlState())
                 
             }
             

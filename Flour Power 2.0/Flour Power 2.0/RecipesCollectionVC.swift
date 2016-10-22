@@ -25,7 +25,7 @@ class RecipesCollectionVC: UICollectionViewController {
     @IBOutlet var recipeCollectionView: UICollectionView!
     
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         recipes = []
@@ -56,23 +56,23 @@ class RecipesCollectionVC: UICollectionViewController {
     }
     
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return recipes.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("RecipesCell", forIndexPath: indexPath) as! RecipeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath) as! RecipeCell
         
         
-        let recipe = recipes[indexPath.item]
+        let recipe = recipes[(indexPath as NSIndexPath).item]
         
         cell.recipeInfo = recipe
         
         cell.recipeImageView.image = recipe.recipeSourceImage ?? recipe.getImage()
         
-        cell.recipeImageView.contentMode = .ScaleAspectFill
+        cell.recipeImageView.contentMode = .scaleAspectFill
         
         cell.titleLabel.text = recipe.recipeTitle
         
@@ -82,12 +82,12 @@ class RecipesCollectionVC: UICollectionViewController {
         
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let recipe = recipes[indexPath.item]
+        let recipe = recipes[(indexPath as NSIndexPath).item]
         
         
-        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as? RecipeDetailVC
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? RecipeDetailVC
         
         
         detailVC?.recipe = recipe
@@ -136,9 +136,9 @@ class Recipe: NSObject {
     
     func getImage() -> UIImage? {
         
-        if let imageURL = NSURL(string: recipeSourceImageURL ?? "") {
+        if let imageURL = URL(string: recipeSourceImageURL ?? "") {
             
-            if let imageData = NSData(contentsOfURL: imageURL) {
+            if let imageData = try? Data(contentsOf: imageURL) {
                 
                 recipeSourceImage = UIImage(data: imageData)
                 return UIImage(data: imageData)

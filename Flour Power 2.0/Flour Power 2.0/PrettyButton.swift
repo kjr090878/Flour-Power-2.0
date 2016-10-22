@@ -14,7 +14,7 @@ class PrettyButton: UIButton {
     @IBInspectable var cornerRadius: CGFloat = 0
     
     
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = true
@@ -25,5 +25,5 @@ class PrettyButton: UIButton {
     
     @IBInspectable var borderWidth: CGFloat = 2
     
-    @IBInspectable var borderColor: CGColor = UIColor.blackColor().CGColor
+    @IBInspectable var borderColor: CGColor = UIColor.black.cgColor
 }
