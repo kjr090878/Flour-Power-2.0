@@ -14,7 +14,6 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     var recipe: Recipe!
     
     @IBOutlet weak var titleLabel: UILabel!
-
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var btnLast: UIButton!
     @IBOutlet weak var btnPause: UIButton!
@@ -51,7 +50,7 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         titleLabel.text = recipe.recipeTitle
         
-        print(recipe.recipeTitle)
+        print(recipe.recipeTitle!)
         
         recipeImageView.image = recipe.recipeSourceImage ?? recipe.getImage()
         

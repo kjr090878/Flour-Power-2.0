@@ -9,13 +9,17 @@
 import UIKit
 import Foundation
 
+
 class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDelegate {
+    
+    
+    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var flourLargeLogoImage: UIImageView!
     
     @IBOutlet weak var bgImage: UIImageView!
     
-    @IBOutlet weak var segueToHomeVCActivityIndicator: UIActivityIndicatorView!
+ 
     @IBOutlet weak var passwordField: UITextField!
     
     @IBOutlet weak var loginOutlet: PrettyButton!
@@ -25,11 +29,13 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
     @IBOutlet weak var loginRegisterOutlet: PrettyButton!
     
     @IBAction func loginRegisterAction(_ sender: AnyObject) {
+        self.myActivityIndicator.startAnimating()
         
     }
     @IBAction func pressedLogin(_ sender: AnyObject) {
       
-        
+        self.myActivityIndicator.startAnimating()
+
         guard let password = passwordField?.text else { return }
         guard let email = emailField.text else { return }
         //if they aren't empty
@@ -37,14 +43,11 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
         print("login pressed")
         
         RailsRequest.session().loginWithEmail(email, andPassword: password, completion: {
-            
             let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC")
             self.navigationController?.pushViewController(homeVC!, animated: true)
-            self.segueToHomeVCActivityIndicator.startAnimating()
-            self.segueToHomeVCActivityIndicator.stopAnimating()
-           
-            
+           self.myActivityIndicator.stopAnimating()
         })
+        
         
     }
     
@@ -65,7 +68,7 @@ class LoginViewController: UIViewController, UIWebViewDelegate, UITextFieldDeleg
             NSNotification.Name.UIKeyboardWillShow, object: nil);
         
         NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
-        view.addSubview(segueToHomeVCActivityIndicator)
+        
         
        
         

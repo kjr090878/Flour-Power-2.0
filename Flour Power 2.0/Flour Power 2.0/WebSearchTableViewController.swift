@@ -10,14 +10,14 @@ import UIKit
 
 class WebSearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchResultsUpdating {
     
-    var search_terms = String?()
+    var search_terms = String?.self
     var category: String?
     var data : [String] = []
     var recipes: [Recipe] = []
     var searchController: UISearchController!
     var searchResults = [String]()
     var searchActive : Bool = false
-    var type = String?()
+    var type = String?.self
     var categoryID: Int?
     
     

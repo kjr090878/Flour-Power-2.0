@@ -86,7 +86,7 @@ class RailsRequest: NSObject {
                 
                 self.token = key
                 
-                print(self.token)
+                print(self.token as Any)
                 
             }
             
@@ -144,11 +144,10 @@ class RailsRequest: NSObject {
         //here we grab the access token & user id
         
         
-        
         // add parameters to body
         
         //creates a task from request
-        let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) -> Void in
+        let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
             DispatchQueue.main.async(execute: { () -> Void in
                 
@@ -158,7 +157,7 @@ class RailsRequest: NSObject {
                     
                     if let returnedInfo = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
                         
-                        completion(returnedInfo: returnedInfo)
+                        completion(returnedInfo as AnyObject?)
                         
                     }
                     
