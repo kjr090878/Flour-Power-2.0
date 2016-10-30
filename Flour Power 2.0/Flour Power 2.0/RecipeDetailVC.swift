@@ -24,6 +24,8 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var buttonStack: UIStackView!
     @IBOutlet weak var btnNextStep: UIButton!
     
+    
+    
     let speechSynthesizer = AVSpeechSynthesizer()
     
     var rate: Float!
@@ -267,13 +269,13 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt cellForRowAtIndexPath: IndexPath) -> UITableViewCell {
         
         
         var reuseID = ""
         
         
-        if (indexPath as NSIndexPath).section == 0 {
+        if indexPath.section == 0 {
             
             reuseID = "IngredientCell"
             
@@ -286,9 +288,9 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseID, for: indexPath)
         
-        if (indexPath as NSIndexPath).section == 0 {
+        if indexPath.section == 0 {
             
-            let ingredient = recipe.ingredients[(indexPath as NSIndexPath).row]
+            let ingredient = recipe.ingredients[indexPath.row]
             
             
             
@@ -303,9 +305,9 @@ class RecipeDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         } else {
             
-            print(recipe.directions[(indexPath as NSIndexPath).row])
+            print(recipe.directions[indexPath.row])
             
-            cell.textLabel?.text = recipe.directions[(indexPath as NSIndexPath).row]
+            cell.textLabel?.text = recipe.directions[indexPath.row]
             
             cell.backgroundColor = UIColor(red:0.82, green:0.99, blue:1, alpha:1)
             

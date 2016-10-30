@@ -8,6 +8,6 @@
 
 import UIKit
 
-class IngredientCell: UICollectionViewCell {
+class IngredientCell: UITableViewCell {
     
 }

@@ -8,6 +8,6 @@
 
 import UIKit
 
-class StepCell: UICollectionViewCell {
+class StepCell: UITableViewCell {
     
 }

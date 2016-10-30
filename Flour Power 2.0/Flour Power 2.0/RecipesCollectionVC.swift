@@ -63,10 +63,10 @@ class RecipesCollectionVC: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath) as! RecipeCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipesCell", for: indexPath as IndexPath) as! RecipeCell
         
         
-        let recipe = recipes[(indexPath as NSIndexPath).item]
+        let recipe = recipes[(indexPath as IndexPath).item]
         
         cell.recipeInfo = recipe
         

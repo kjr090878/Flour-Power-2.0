@@ -15,10 +15,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var sFR: UIButton!
     
     @IBOutlet weak var category0: PrettyButton!
+
     @IBOutlet weak var category1: PrettyButton!
+ 
+    
     @IBOutlet weak var category2: PrettyButton!
+    
     @IBOutlet weak var category3: PrettyButton!
+    
     @IBOutlet weak var category4: PrettyButton!
+    
     @IBOutlet weak var category5: PrettyButton!
     
     @IBAction func searchMyRecipes(_ sender: AnyObject) {

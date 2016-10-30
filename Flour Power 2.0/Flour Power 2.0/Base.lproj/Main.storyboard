@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VR1-51-lD9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VR1-51-lD9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -267,7 +267,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H9S-Cy-585"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlI-fF-njd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tp-hc-cgI" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
@@ -286,7 +286,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDi-GS-STE"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mCp-JJ-3GT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -361,10 +361,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7e-Nz-h9z"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0dm-6P-Cl4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpg-jH-3zC" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zpg-jH-3zC" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
                                         <rect key="frame" x="172.5" y="0.0" width="162.5" height="60"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -380,7 +380,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pyj-J1-7bY"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSm-ri-lKK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -391,7 +391,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZMI-hO-YEW">
                                 <rect key="frame" x="20" y="587" width="335" height="60"/>
                                 <subviews>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWF-tn-Qkc" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWF-tn-Qkc" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="60"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -407,10 +407,10 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JQk-F9-cjL"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUZ-Q8-cqF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-Ft-oij" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcN-Ft-oij" customClass="PrettyButton" customModule="Flour_Power_2_0" customModuleProvider="target">
                                         <rect key="frame" x="172.5" y="0.0" width="162.5" height="60"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -426,7 +426,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QW6-Yk-kev"/>
+                                            <action selector="categoryButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAB-Js-gdx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -458,7 +458,7 @@
                     <navigationItem key="navigationItem" id="scl-gO-GbV">
                         <nil key="title"/>
                         <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="con-Sq-P5f">
-                            <rect key="frame" x="161" y="6" width="54" height="32"/>
+                            <rect key="frame" x="160.5" y="6" width="54" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="logosmall"/>
                             <connections>
@@ -468,12 +468,12 @@
                     </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="category0" destination="4tp-hc-cgI" id="eib-wv-CX8"/>
-                        <outlet property="category1" destination="oXr-vn-8Lv" id="RbS-QV-CgD"/>
-                        <outlet property="category2" destination="VWF-tn-Qkc" id="2qT-X4-wgp"/>
-                        <outlet property="category3" destination="KcN-Ft-oij" id="eKL-sF-AjJ"/>
-                        <outlet property="category4" destination="Zpg-jH-3zC" id="gH6-ny-xtQ"/>
-                        <outlet property="category5" destination="IRJ-w0-fwb" id="Wgp-oz-Mc5"/>
+                        <outlet property="category0" destination="oXr-vn-8Lv" id="1ww-TF-rtC"/>
+                        <outlet property="category1" destination="4tp-hc-cgI" id="8Fk-mC-22B"/>
+                        <outlet property="category2" destination="IRJ-w0-fwb" id="2R9-Rh-Hd8"/>
+                        <outlet property="category3" destination="KcN-Ft-oij" id="Z9W-6o-dqn"/>
+                        <outlet property="category4" destination="Zpg-jH-3zC" id="COD-G3-cvx"/>
+                        <outlet property="category5" destination="VWF-tn-Qkc" id="LuK-wS-rYU"/>
                         <outlet property="sFR" destination="JHm-dn-IbN" id="N2j-kn-NNa"/>
                         <outlet property="sMR" destination="3hT-6N-wcK" id="KJf-oj-emU"/>
                         <outlet property="smallLogo" destination="con-Sq-P5f" id="KSn-L9-oF5"/>
@@ -488,34 +488,35 @@
         <scene sceneID="oVd-Ub-2bk">
             <objects>
                 <collectionViewController storyboardIdentifier="RecipesVC" id="UKf-wy-u11" customClass="RecipesCollectionVC" customModule="Flour_Power_2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" semanticContentAttribute="spatial" misplaced="YES" dataMode="prototypes" id="fZq-xb-E9O">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" semanticContentAttribute="spatial" dataMode="prototypes" id="fZq-xb-E9O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Eyn-tf-djc">
-                            <size key="itemSize" width="158" height="162"/>
+                            <size key="itemSize" width="158" height="210"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="24" minY="5" maxX="24" maxY="0.0"/>
+                            <inset key="sectionInset" minX="24" minY="24" maxX="24" maxY="24"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="spatial" reuseIdentifier="RecipesCell" id="pvl-AK-wEb" customClass="RecipeCell" customModule="Flour_Power_2_0" customModuleProvider="target">
-                                <rect key="frame" x="24" y="5" width="158" height="162"/>
+                                <rect key="frame" x="24" y="24" width="158" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="158" height="162"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="158" height="210"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-tp-una">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-tp-una">
                                             <rect key="frame" x="0.0" y="0.0" width="158" height="127"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="127" id="pSm-rg-ots"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-Cl-Lsb">
-                                            <rect key="frame" x="0.0" y="128" width="158" height="34"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-Cl-Lsb">
+                                            <rect key="frame" x="0.0" y="127" width="158" height="83"/>
+                                            <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="34" id="W9w-q0-Qcw"/>
+                                                <constraint firstAttribute="height" constant="83" id="W9w-q0-Qcw"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -524,7 +525,7 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="PO6-Cl-Lsb" firstAttribute="top" secondItem="IIb-tp-una" secondAttribute="bottom" constant="1" id="4AY-Qn-Ebn"/>
+                                    <constraint firstItem="PO6-Cl-Lsb" firstAttribute="top" secondItem="IIb-tp-una" secondAttribute="bottom" id="4AY-Qn-Ebn"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="IIb-tp-una" secondAttribute="trailing" constant="-8" id="eEW-9l-X5n"/>
                                     <constraint firstItem="IIb-tp-una" firstAttribute="leading" secondItem="pvl-AK-wEb" secondAttribute="leadingMargin" constant="-8" id="eTB-n8-AQB"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="PO6-Cl-Lsb" secondAttribute="trailing" constant="-8" id="nS4-Pv-Ld4"/>
@@ -614,7 +615,7 @@
                         <viewControllerLayoutGuide type="top" id="a9A-DR-jeU"/>
                         <viewControllerLayoutGuide type="bottom" id="Q6T-vN-jY3"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zjm-Vm-xDW">
+                    <view key="view" contentMode="scaleAspectFit" id="zjm-Vm-xDW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -634,6 +635,24 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="397" id="GAF-5o-BKM"/>
                                 </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="IngredientCell" id="QNs-Fw-1vy">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QNs-Fw-1vy" id="OiM-DO-aM0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StepCell" id="GF2-yt-phN">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GF2-yt-phN" id="qIn-pT-PSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="CET-4S-VTN">
                                 <rect key="frame" x="80" y="213" width="215" height="47"/>
@@ -758,7 +777,7 @@
                         <outlet property="buttonStack" destination="SgQ-wL-oMx" id="Gyo-2x-eAX"/>
                         <outlet property="nextStack" destination="CET-4S-VTN" id="34L-hz-DpE"/>
                         <outlet property="recipeImageView" destination="ycA-CO-7vk" id="Nyg-DS-gPu"/>
-                        <outlet property="recipeTableView" destination="EdU-vw-1NW" id="Zws-ij-cSc"/>
+                        <outlet property="recipeTableView" destination="EdU-vw-1NW" id="vsS-4b-VG2"/>
                         <outlet property="titleLabel" destination="u5c-qm-4yQ" id="W1t-PB-cc0"/>
                     </connections>
                 </viewController>
