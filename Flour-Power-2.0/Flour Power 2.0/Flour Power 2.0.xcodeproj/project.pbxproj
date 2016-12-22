@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D8A631D1D53A94D002D2309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A631C1D53A94D002D2309 /* AppDelegate.swift */; };
+		3D8A631F1D53A94D002D2309 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A631E1D53A94D002D2309 /* HomeVC.swift */; };
+		3D8A63221D53A94D002D2309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A63201D53A94D002D2309 /* Main.storyboard */; };
+		3D8A63241D53A94D002D2309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A63231D53A94D002D2309 /* Assets.xcassets */; };
+		3D8A63271D53A94D002D2309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D8A63251D53A94D002D2309 /* LaunchScreen.storyboard */; };
+		3D8A632F1D53AA9A002D2309 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A632E1D53AA9A002D2309 /* LoginViewController.swift */; };
+		3D8A63311D53AC3B002D2309 /* PrettyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63301D53AC3B002D2309 /* PrettyButton.swift */; };
+		3D8A63331D53AEA4002D2309 /* RailsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63321D53AEA4002D2309 /* RailsRequest.swift */; };
+		3D8A63351D53B557002D2309 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63341D53B557002D2309 /* RegisterViewController.swift */; };
+		3D8A63391D53B9EA002D2309 /* RecipesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63381D53B9EA002D2309 /* RecipesCollectionVC.swift */; };
+		3D8A633B1D53BA8D002D2309 /* RecipeDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A633A1D53BA8D002D2309 /* RecipeDetailVC.swift */; };
+		3D8A63421D53BC3B002D2309 /* IngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63411D53BC3B002D2309 /* IngredientCell.swift */; };
+		3D8A63451D53BC91002D2309 /* MyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63441D53BC91002D2309 /* MyCell.swift */; };
+		3D8A63471D53BCDD002D2309 /* SFPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63461D53BCDD002D2309 /* SFPTableViewController.swift */; };
+		3D8A63491D53BD30002D2309 /* StepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A63481D53BD30002D2309 /* StepCell.swift */; };
+		3D8A634B1D53BD5F002D2309 /* WebCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A634A1D53BD5F002D2309 /* WebCell.swift */; };
+		3D8A634D1D53C20F002D2309 /* WebSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8A634C1D53C20F002D2309 /* WebSearchTableViewController.swift */; };
+		3DE7FDF71D6740BE007682F6 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE7FDF61D6740BE007682F6 /* RecipeCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D8A63191D53A94D002D2309 /* Flour Power 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flour Power 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D8A631C1D53A94D002D2309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D8A631E1D53A94D002D2309 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3D8A63211D53A94D002D2309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3D8A63231D53A94D002D2309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3D8A63261D53A94D002D2309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3D8A63281D53A94D002D2309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D8A632E1D53AA9A002D2309 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3D8A63301D53AC3B002D2309 /* PrettyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrettyButton.swift; sourceTree = "<group>"; };
+		3D8A63321D53AEA4002D2309 /* RailsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RailsRequest.swift; sourceTree = "<group>"; };
+		3D8A63341D53B557002D2309 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3D8A63381D53B9EA002D2309 /* RecipesCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipesCollectionVC.swift; sourceTree = "<group>"; };
+		3D8A633A1D53BA8D002D2309 /* RecipeDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailVC.swift; sourceTree = "<group>"; };
+		3D8A63411D53BC3B002D2309 /* IngredientCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientCell.swift; sourceTree = "<group>"; };
+		3D8A63441D53BC91002D2309 /* MyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCell.swift; sourceTree = "<group>"; };
+		3D8A63461D53BCDD002D2309 /* SFPTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFPTableViewController.swift; sourceTree = "<group>"; };
+		3D8A63481D53BD30002D2309 /* StepCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepCell.swift; sourceTree = "<group>"; };
+		3D8A634A1D53BD5F002D2309 /* WebCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebCell.swift; sourceTree = "<group>"; };
+		3D8A634C1D53C20F002D2309 /* WebSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSearchTableViewController.swift; sourceTree = "<group>"; };
+		3DE7FDF61D6740BE007682F6 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D8A63161D53A94D002D2309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D8A63101D53A94D002D2309 = {
+			isa = PBXGroup;
+			children = (
+				3D8A631B1D53A94D002D2309 /* Flour Power 2.0 */,
+				3D8A631A1D53A94D002D2309 /* Products */,
+				3D8A63501D53C2D1002D2309 /* System */,
+			);
+			sourceTree = "<group>";
+		};
+		3D8A631A1D53A94D002D2309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A63191D53A94D002D2309 /* Flour Power 2.0.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D8A631B1D53A94D002D2309 /* Flour Power 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A63321D53AEA4002D2309 /* RailsRequest.swift */,
+				3D8A63301D53AC3B002D2309 /* PrettyButton.swift */,
+				3D8A631E1D53A94D002D2309 /* HomeVC.swift */,
+				3D8A63201D53A94D002D2309 /* Main.storyboard */,
+				3D8A634E1D53C28B002D2309 /* Login */,
+				3D8A634F1D53C2B8002D2309 /* CollectionView */,
+				3D8A63511D53C303002D2309 /* TableViewControllers */,
+				3D8A63431D53BC52002D2309 /* TableViewCells */,
+				3D8A63401D53BBFC002D2309 /* CollectionViewCells */,
+			);
+			path = "Flour Power 2.0";
+			sourceTree = "<group>";
+		};
+		3D8A63401D53BBFC002D2309 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A63411D53BC3B002D2309 /* IngredientCell.swift */,
+				3D8A63481D53BD30002D2309 /* StepCell.swift */,
+				3DE7FDF61D6740BE007682F6 /* RecipeCell.swift */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		3D8A63431D53BC52002D2309 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A63441D53BC91002D2309 /* MyCell.swift */,
+				3D8A634A1D53BD5F002D2309 /* WebCell.swift */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		3D8A634E1D53C28B002D2309 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A632E1D53AA9A002D2309 /* LoginViewController.swift */,
+				3D8A63341D53B557002D2309 /* RegisterViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		3D8A634F1D53C2B8002D2309 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A633A1D53BA8D002D2309 /* RecipeDetailVC.swift */,
+				3D8A63381D53B9EA002D2309 /* RecipesCollectionVC.swift */,
+			);
+			name = CollectionView;
+			sourceTree = "<group>";
+		};
+		3D8A63501D53C2D1002D2309 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A63281D53A94D002D2309 /* Info.plist */,
+				3D8A63251D53A94D002D2309 /* LaunchScreen.storyboard */,
+				3D8A63231D53A94D002D2309 /* Assets.xcassets */,
+				3D8A631C1D53A94D002D2309 /* AppDelegate.swift */,
+			);
+			name = System;
+			path = "Flour Power 2.0";
+			sourceTree = "<group>";
+		};
+		3D8A63511D53C303002D2309 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D8A634C1D53C20F002D2309 /* WebSearchTableViewController.swift */,
+				3D8A63461D53BCDD002D2309 /* SFPTableViewController.swift */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D8A63181D53A94D002D2309 /* Flour Power 2.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D8A632B1D53A94D002D2309 /* Build configuration list for PBXNativeTarget "Flour Power 2.0" */;
+			buildPhases = (
+				3D8A63151D53A94D002D2309 /* Sources */,
+				3D8A63161D53A94D002D2309 /* Frameworks */,
+				3D8A63171D53A94D002D2309 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flour Power 2.0";
+			productName = "Flour Power 2.0";
+			productReference = 3D8A63191D53A94D002D2309 /* Flour Power 2.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D8A63111D53A94D002D2309 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Kelly Robinson";
+				TargetAttributes = {
+					3D8A63181D53A94D002D2309 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = EJ39HX343P;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3D8A63141D53A94D002D2309 /* Build configuration list for PBXProject "Flour Power 2.0" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3D8A63101D53A94D002D2309;
+			productRefGroup = 3D8A631A1D53A94D002D2309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D8A63181D53A94D002D2309 /* Flour Power 2.0 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D8A63171D53A94D002D2309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D8A63271D53A94D002D2309 /* LaunchScreen.storyboard in Resources */,
+				3D8A63241D53A94D002D2309 /* Assets.xcassets in Resources */,
+				3D8A63221D53A94D002D2309 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D8A63151D53A94D002D2309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE7FDF71D6740BE007682F6 /* RecipeCell.swift in Sources */,
+				3D8A632F1D53AA9A002D2309 /* LoginViewController.swift in Sources */,
+				3D8A63311D53AC3B002D2309 /* PrettyButton.swift in Sources */,
+				3D8A631F1D53A94D002D2309 /* HomeVC.swift in Sources */,
+				3D8A633B1D53BA8D002D2309 /* RecipeDetailVC.swift in Sources */,
+				3D8A63491D53BD30002D2309 /* StepCell.swift in Sources */,
+				3D8A63471D53BCDD002D2309 /* SFPTableViewController.swift in Sources */,
+				3D8A634D1D53C20F002D2309 /* WebSearchTableViewController.swift in Sources */,
+				3D8A63421D53BC3B002D2309 /* IngredientCell.swift in Sources */,
+				3D8A63351D53B557002D2309 /* RegisterViewController.swift in Sources */,
+				3D8A63391D53B9EA002D2309 /* RecipesCollectionVC.swift in Sources */,
+				3D8A63451D53BC91002D2309 /* MyCell.swift in Sources */,
+				3D8A63331D53AEA4002D2309 /* RailsRequest.swift in Sources */,
+				3D8A634B1D53BD5F002D2309 /* WebCell.swift in Sources */,
+				3D8A631D1D53A94D002D2309 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D8A63201D53A94D002D2309 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D8A63211D53A94D002D2309 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3D8A63251D53A94D002D2309 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D8A63261D53A94D002D2309 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D8A63291D53A94D002D2309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kelly Robinson (5HX6KR67WQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kelly Robinson (5HX6KR67WQ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = EJ39HX343P;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3D8A632A1D53A94D002D2309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kelly Robinson (5HX6KR67WQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kelly Robinson (5HX6KR67WQ)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = EJ39HX343P;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D8A632C1D53A94D002D2309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EJ39HX343P;
+				INFOPLIST_FILE = "Flour Power 2.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Kelly.Flour-Power-2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		3D8A632D1D53A94D002D2309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = EJ39HX343P;
+				INFOPLIST_FILE = "Flour Power 2.0/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Kelly.Flour-Power-2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D8A63141D53A94D002D2309 /* Build configuration list for PBXProject "Flour Power 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D8A63291D53A94D002D2309 /* Debug */,
+				3D8A632A1D53A94D002D2309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D8A632B1D53A94D002D2309 /* Build configuration list for PBXNativeTarget "Flour Power 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D8A632C1D53A94D002D2309 /* Debug */,
+				3D8A632D1D53A94D002D2309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D8A63111D53A94D002D2309 /* Project object */;
+}
